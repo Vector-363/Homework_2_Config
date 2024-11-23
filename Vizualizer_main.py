@@ -64,7 +64,37 @@ def get_dependencies(package_name, package_version, depth=0, max_depth=1, all_de
 
     return all_dependencies
 
+def build_mermaid_graph(dependencies):
+    if not isinstance(dependencies, dict):
+        return "Error: Invalid input. 'dependencies' must be a dictionary."
 
+    for package, deps in dependencies.items():
+        if not isinstance(deps, set):
+            return "Error: Invalid input. Dependency values must be sets."
+
+    graph = "graph LR;\n"
+
+    # Добавляем узлы (пакеты) с подграфами
+    for package_name_version in dependencies:
+        package_name, package_version = package_name_version.rsplit(".", 1)  # Разделяем на имя и версию
+        graph += f'subgraph "{package_name} ({package_version})"\n'  # Подграф с номером версии
+        graph += f"{package_name_version}\n"
+        graph += "end\n"
+
+    # Добавляем ребра (зависимости)
+    for package_name_version, deps in dependencies.items():
+        for dep in deps:
+            graph += f"{package_name_version} --> {dep}\n"
+
+    return graph
+
+def show_png_Graph(mermaid_graph):
+    with open("graph.mmd", "w") as f:
+        f.write(mermaid_graph)
+    print("Graph saved to graph.mmd. Generating PNG...")
+    os.system(f"mmdc -i graph.mmd -o graph.png")
+    print("PNG generated as graph.png. Opening the image...")
+    os.system("start graph.png" if os.name == "nt" else "open graph.png")
 
 def main():
     parser = argparse.ArgumentParser(description="Visualize .NET package dependencies using Mermaid.")
@@ -75,6 +105,8 @@ def main():
     args = parser.parse_args()
 
     dependencies = get_dependencies(args.package_name, args.package_version)  # поиск зависимостей
+    mermaid_graph = build_mermaid_graph(dependencies)  # создание файла для графа
+    show_png_Graph(mermaid_graph)  # создание png и открытие его
 
 
 
