@@ -119,7 +119,7 @@ def main():
     mermaid_graph = build_mermaid_graph(dependencies)  # создание файла для графа
     show_png_Graph(mermaid_graph)  # создание png и открытие его
 
-    cleanup_downloaded_packages(r"C:\Users\Acer\PycharmProjects\Homework_2_Config")   # очистка скачанных пакетов
+    cleanup_downloaded_packages(r"C:\Users\Acer\PycharmProjects\Homework_2_Config")  # очистка скачанных пакетов
 
 
 
