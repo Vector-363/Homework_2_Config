@@ -4,6 +4,13 @@
 # package_id = "1.0.3"
 # url = "https://www.nuget.org/api/v2/package/Newtonsoft.Json.Bson/1.0.3"
 
+#Тест2
+# mermaid_cli_path = r"C:\Users\Acer\AppData\Roaming\npm\mmdc.cmd"
+# package_name = System.Runtime.Serialization.Json
+# package_id = 4.3.0
+# url = https://www.nuget.org/api/v2/package/System.Runtime.Serialization.Json/4.3.0
+
+
 import requests
 import os
 import argparse
