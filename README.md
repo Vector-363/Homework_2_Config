@@ -36,19 +36,19 @@ def download_file(url, save_path) - функция для скачивания �
 def get_dependencies(package_name, package_version, depth=0, max_depth=1, all_dependencies=None) - функция для парсирования пакетов
   
 
-def build_mermaid_graph(dependencies) функция для создания файла графа 
+def build_mermaid_graph(dependencies) - функция для создания файла графа 
    
 
-def show_png_Graph(mermaid_graph) функция для создания png графа
+def show_png_Graph(mermaid_graph) - функция для создания png графа
    
 
-def cleanup_downloaded_packages(save_directory) функция очисти пакетов
+def cleanup_downloaded_packages(save_directory) - функция очисти пакетов
 
 Тестирование
 
 ТЕСТ 1 
 
-# mermaid_cli_path = r"C:\Users\Acer\AppData\Roaming\npm\mmdc.cmd"
+# mermaid_cli_path = "C:\Users\Acer\AppData\Roaming\npm\mmdc.cmd"
 
 # package_name = "Newtonsoft.Json.Bson"
 
@@ -58,9 +58,12 @@ def cleanup_downloaded_packages(save_directory) функция очисти па
 
 Скриншот командной строки:
 
+![image](https://github.com/user-attachments/assets/1f046d6a-ea9a-47fe-a3fa-58e9bbce602c)
+
 
 Скриншот самого графа:
 
+![image](https://github.com/user-attachments/assets/5f93b5af-ff51-44eb-ad6b-0ec030d0f027)
 
 ТЕСТ 2
 
@@ -74,7 +77,10 @@ def cleanup_downloaded_packages(save_directory) функция очисти па
 
 Скриншот командной строки:
 
+![image](https://github.com/user-attachments/assets/7ab7546d-46b0-4f72-b602-1e55a48d27ba)
 
 Скриншот самого графа:
+
+![image](https://github.com/user-attachments/assets/c4312cce-0544-481b-ada1-7639933cdbc5)
 
 
