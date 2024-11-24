@@ -48,13 +48,13 @@ def cleanup_downloaded_packages(save_directory) - функция очисти п
 
 ТЕСТ 1 
 
-# mermaid_cli_path = "C:\Users\Acer\AppData\Roaming\npm\mmdc.cmd"
+mermaid_cli_path = "C:\Users\Acer\AppData\Roaming\npm\mmdc.cmd"
 
-# package_name = "Newtonsoft.Json.Bson"
+package_name = "Newtonsoft.Json.Bson"
 
-# package_id = "1.0.3"
+package_id = "1.0.3"
 
-# url = "https://www.nuget.org/api/v2/package/Newtonsoft.Json.Bson/1.0.3"
+url = "https://www.nuget.org/api/v2/package/Newtonsoft.Json.Bson/1.0.3"
 
 Скриншот командной строки:
 
@@ -67,13 +67,13 @@ def cleanup_downloaded_packages(save_directory) - функция очисти п
 
 ТЕСТ 2
 
-# mermaid_cli_path = r"C:\Users\Acer\AppData\Roaming\npm\mmdc.cmd"
+mermaid_cli_path = r"C:\Users\Acer\AppData\Roaming\npm\mmdc.cmd"
 
-# package_name = System.Runtime.Serialization.Json
+package_name = System.Runtime.Serialization.Json
 
-# package_id = 4.3.0
+package_id = 4.3.0
 
-# url = https://www.nuget.org/api/v2/package/System.Runtime.Serialization.Json/4.3.0
+url = https://www.nuget.org/api/v2/package/System.Runtime.Serialization.Json/4.3.0
 
 Скриншот командной строки:
 
