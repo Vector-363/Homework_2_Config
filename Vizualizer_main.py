@@ -37,6 +37,11 @@ def download_file(url, save_path):
         print(f"Произошла ошибка: {err}")
 
 def get_dependencies(package_name, package_version, depth=0, max_depth=1, all_dependencies=None):
+    if all_dependencies is None:
+        all_dependencies = {}
+    if depth > max_depth:
+        return all_dependencies
+
     url = f"https://www.nuget.org/api/v2/package/{package_name}/{package_version}"  # Corrected URL
     save_directory = r"C:\Users\Acer\PycharmProjects\Homework_2_Config"  # Update to your directory
     save_file_path = os.path.join(save_directory, f"{package_name}.{package_version}.nupkg")
@@ -104,7 +109,6 @@ def show_png_Graph(mermaid_graph):
     os.system("start graph.png" if os.name == "nt" else "open graph.png")
 
 def cleanup_downloaded_packages(save_directory):
-    """Removes all downloaded .nupkg files from the specified directory."""
     for filename in os.listdir(save_directory):
         if filename.endswith(".nupkg"):
             filepath = os.path.join(save_directory, filename)
@@ -124,6 +128,7 @@ def main():
 
     dependencies = get_dependencies(args.package_name, args.package_version)  # поиск зависимостей
     mermaid_graph = build_mermaid_graph(dependencies)  # создание файла для графа
+
     show_png_Graph(mermaid_graph)  # создание png и открытие его
 
     cleanup_downloaded_packages(r"C:\Users\Acer\PycharmProjects\Homework_2_Config")  # очистка скачанных пакетов
