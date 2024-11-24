@@ -83,4 +83,4 @@ def cleanup_downloaded_packages(save_directory) - функция очисти п
 
 ![image](https://github.com/user-attachments/assets/c4312cce-0544-481b-ada1-7639933cdbc5)
 
-
+Также вся система протестирована в отдельном файле: 
