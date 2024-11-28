@@ -60,6 +60,10 @@ url = "https://www.nuget.org/api/v2/package/Newtonsoft.Json.Bson/1.0.3"
 
 ![image](https://github.com/user-attachments/assets/1f046d6a-ea9a-47fe-a3fa-58e9bbce602c)
 
+Скриншот файла с кодом графа:
+
+![image](https://github.com/user-attachments/assets/d6e292a7-f5c6-43c9-8555-dff2ec84660a)
+
 
 Скриншот самого графа:
 
